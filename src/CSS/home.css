@@ -96,6 +96,45 @@
     margin-bottom: 0.5em;
   }
 
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2em;
+  }
+
+  .img-container {
+    margin-right: 3em;
+  }
+
+  .img-container img {
+    Width:35rem;
+    height: auto;
+
+  }
+
+  .text-container h2{
+    font-family: Helvetica, sans-serif;
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+  }
+
+  @media screen and (min-width: 768px) {
+    .container {
+      flex-direction: row;
+    }
+
+    .img-container {
+      margin-right: 2em;
+    }
+
+    .text-container {
+      flex: 1;
+    }
+  }
+
   .about-text2 p {
     font-size: 1em;
     line-height: 1.5;

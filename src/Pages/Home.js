@@ -9,6 +9,7 @@ import cal from "../Images/calendar.png";
 import stat from "../Images/stat.png";
 import partner from "../Images/logo-opeva.jpg";
 import Footer from './Footer.js';
+import img from "../Images/overview.png";
 
 function Home(){
     return (
@@ -44,17 +45,16 @@ function Home(){
             </section>
 
             <section className="about">
-                <div className="about-image">
-                    <img src={logo} alt="Logo" />
+                <div>
+                    <div className="container">
+                        <div className="img-container">
+                            <img src={logo} alt="my image" />
+                        </div>
+                        <div className="text-container">
+                            <h2>To optimization the electric vehicule autonomy</h2>
+                            <p>The main objective of OPEVA is to improve EV market penetration and widespread adoption by tackling the limiting psychological factors such as range anxiety, high price, limited charging facilities, and duration of charging. The project will be coordinated by Pertimm Developpement and it is co-sponsored by Key Digital Technology Joint Undertaking , the program Horizon Europe and the National authorities of the participating countries.</p>
+                        </div>
                 </div>
-                <div className="about-text2">
-                    <h2>OPEVA main objectives </h2>
-                    <p>The main objective of OPEVA is to improve EV market penetration and widespread adoption by
-                        tackling the limiting psychological factors such as range anxiety, high price, limited charging
-                        facilities, and duration of charging. The project will be coordinated by Pertimm Developpement
-                        and it is co-sponsored by Key Digital Technology Joint Undertaking , the program Horizon Europe
-                        and the National authorities of the participating countries.</p>
-
                     <div className="allsquares">
                         <div className="square">
                             <a href="about">
