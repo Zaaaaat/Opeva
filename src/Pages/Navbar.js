@@ -86,65 +86,65 @@ function Navbar() {
 
     return (
         <div className="rectangle-nav">
-        <nav className="navbar">
-            <a href="#" className="logo">
-                <img className="Logo" src={Logo} alt="logo" />
-            </a>
+            <nav className="navbar">
+                <a href="#" className="logo">
+                    <img className="Logo" src={Logo} alt="logo" />
+                </a>
 
-            <div className="nav_links ">
+                <div className="nav_links ">
 
                     <a href="/">HOME</a>
 
-                <div className="dropdown">
-                    <a>ABOUT</a>
-                    <ul>
-                        <li>
-                            <a href="/About">About us</a>
-                        </li>
-                        <li>
-                            <a href="/Partner">Partners</a>
-                        </li>
-                        <li>
-                            <a href="/Demos">Demos</a>
-                        </li>
-                    </ul>
-                </div>
+                    <div className="dropdown">
+                        <a href="/About">ABOUT</a>
+                        <ul>
+                            <li>
+                                <a href="/About">About us</a>
+                            </li>
+                            <li>
+                                <a href="/Partner">Partners</a>
+                            </li>
+                            <li>
+                                <a href="/Demos">Demos</a>
+                            </li>
+                        </ul>
+                    </div>
 
 
                     <a href="/News">NEWS</a>
-                <div className="dropdown">
-                    <a href="/Publications">PUBLICATIONS</a>
-                <ul>
-                    <li>
-                        <a href="/Deliverables">Deliverables</a>
-                    </li>
-                    <li>
-                        <a href="/PPresent">Papers & Presentations</a>
-                    </li>
-                </ul>
-                </div>
+                    <div className="dropdown">
+                        <a href="/Publications">PUBLICATIONS</a>
+                        <ul>
+                            <li>
+                                <a href="/Deliverables">Deliverables</a>
+                            </li>
+                            <li>
+                                <a href="/PPresent">Papers & Presentations</a>
+                            </li>
+                        </ul>
+                    </div>
 
 
                     <a href="/Contact">CONTACT</a>
                     <a href="/Connexion">CONNEXION</a>
 
-            </div>
+                </div>
 
-            <div className="search-box">
-                <input type="text" placeholder="Search..." />
-                <button><img src={Loupe} alt="logo"/></button>
-            </div>
+                <div className="search-box">
+                    <input type="text" placeholder="Search..." />
+                    <button><img src={Loupe} alt="logo"/></button>
+                </div>
 
-            <div className="icon_click">
-                <img
-                    id="burger"
-                    src={BurgerMenu}
-                    alt="menu"
-                    className="menu_hamburger"
-                    onClick={toggleMenu}
-                />
-            </div>
-        </nav>
+                <div className="icon_click">
+                    <img
+                        id="burger"
+                        src={BurgerMenu}
+                        alt="menu"
+                        className="menu_hamburger"
+                        onClick={toggleMenu}
+                    />
+                </div>
+            </nav>
         </div>
     );
 }

@@ -7,7 +7,6 @@ import lab from "../Images/lab.png";
 import map from "../Images/map.png";
 import cal from "../Images/calendar.png";
 import stat from "../Images/stat.png";
-import partner from "../Images/logo-opeva.jpg";
 import Footer from './Footer.js';
 import img from "../Images/overview.png";
 
