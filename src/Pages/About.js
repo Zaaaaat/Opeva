@@ -1,8 +1,8 @@
 import React from 'react';
 import '../CSS/topEachPage.css';
 import '../CSS/overview.css';
-import Navbar from './Navbar.js';
-import Footer from './Footer.js';
+import Navbar from '../components/Navbar.js';
+import Footer from '../components/Footer.js';
 import img from '../Images/overview.png';
 import WP from '../Images/WP.png';
 

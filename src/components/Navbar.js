@@ -113,13 +113,13 @@ function Navbar() {
 
                     <a href="/News">NEWS</a>
                     <div className="dropdown">
-                        <a href="/Publications">PUBLICATIONS</a>
+                        <a href="/Deliverables">PUBLICATIONS</a>
                         <ul>
                             <li>
                                 <a href="/Deliverables">Deliverables</a>
                             </li>
                             <li>
-                                <a href="/PPresent">Papers & Presentations</a>
+                                <a href="/Papers">Papers & Presentations</a>
                             </li>
                         </ul>
                     </div>

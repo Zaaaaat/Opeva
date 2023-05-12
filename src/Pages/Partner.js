@@ -1,8 +1,8 @@
 import React from 'react';
 import '../CSS/topEachPage.css';
 import '../CSS/Partners.css';
-import Navbar from './Navbar.js';
-import Footer from './Footer.js';
+import Navbar from '../components/Navbar.js';
+import Footer from '../components/Footer.js';
 import europe from "../Images/europep.png";
 
 function Partners(){

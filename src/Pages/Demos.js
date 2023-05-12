@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import '../CSS/topEachPage.css';
 import "@fortawesome/fontawesome-free/css/all.css";
 import '../CSS/demos.css';
-import Navbar from './Navbar.js';
-import Footer from './Footer.js';
+import Navbar from '../components/Navbar.js';
+import Footer from '../components/Footer.js';
 import demos1 from "../Images/demo1.png";
 
 

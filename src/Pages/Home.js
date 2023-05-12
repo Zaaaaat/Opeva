@@ -1,13 +1,13 @@
 import React from 'react';
 import '../CSS/home.css';
-import Navbar from './Navbar.js';
+import Navbar from '../components/Navbar.js';
+import Footer from '../components/Footer.js';
 import logo from "../Images/logo-opeva.jpg";
 import plus from "../Images/plus.png";
 import lab from "../Images/lab.png";
 import map from "../Images/map.png";
 import cal from "../Images/calendar.png";
 import stat from "../Images/stat.png";
-import Footer from './Footer.js';
 import img from "../Images/overview.png";
 
 function Home(){
