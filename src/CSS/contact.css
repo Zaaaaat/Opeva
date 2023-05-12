@@ -95,6 +95,8 @@ p {
     }
 }
 
+
+
 .image-contain-p{
     display: flex;
     flex-direction: row;
@@ -179,7 +181,6 @@ p {
 }
 
 .question2 {
-    text-align: center;
     margin-top: 20px;
 }
 .form-container {
@@ -257,3 +258,108 @@ textarea {
     }
 }
 
+@media screen and (max-width: 1225px) {
+    .contain {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 4rem;
+    }
+
+    .img {
+        width: 80%;
+    }
+
+    .img img {
+        width: 100%;
+    }
+
+    .text-container {
+        width: 80%;
+        margin-left: 0;
+        margin-top: 2rem;
+        align-items: center;
+        text-align: center;
+    }
+
+    .question {
+        font-size: 2.5em;
+    }
+
+    .touch {
+        font-size: 1.4em;
+        margin-bottom: 2rem;
+    }
+
+    .projet {
+        font-size: 1.8em;
+    }
+
+    .discover {
+        font-size: 1em;
+    }
+
+    .image-contain-p {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-contain-p img {
+        margin-bottom: 10px;
+    }
+
+    .texttt {
+        font-size: 1em;
+        align-items: center;
+        text-align: center;
+    }
+
+    .image-plus {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+
+    .image-plus img {
+        width: 8rem;
+        margin-bottom: 1rem;
+    }
+
+    .text-underimage {
+        margin-top: 0.5rem;
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .formulaire {
+        margin-top: 3rem;
+    }
+
+    .question2 {
+        font-size: 2em;
+        margin-top: 0;
+        margin-bottom: 1.5rem;
+    }
+
+    .form-container {
+        margin: 2rem 1rem;
+        padding: 1rem;
+        width: 100%;
+    }
+
+    .rect-form {
+        flex-basis: 100%;
+        margin-bottom: 1rem;
+    }
+
+    label {
+        margin-bottom: 0.5rem;
+        font-size: 1.1em;
+    }
+
+    button[type="submit"] {
+        padding: 1.5rem 2rem;
+        font-size: 1.1em;
+    }
+}

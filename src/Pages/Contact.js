@@ -14,6 +14,10 @@ function Contact(){
                 <Navbar/>
             </div>
 
+            <div className="nav-bar-rectangle">
+                <span>CONTACT</span>
+            </div>
+
             <div className="contain">
                 <div className="img">
                     <img src={drive} alt="description"/>
