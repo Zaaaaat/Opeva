@@ -41,6 +41,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   margin: 0 20px;
   width: 10em;
   height: 10em;
@@ -55,7 +56,6 @@
 }
 
 .circle p:last-child {
-  margin-top: 20px;
   font-size: 18px;
   font-weight: bold;
 }
@@ -108,11 +108,6 @@
     margin-right: 3em;
   }
 
-  .img-container img {
-    Width:35rem;
-    height: auto;
-
-  }
 
   .text-container h2{
     font-family: Helvetica, sans-serif;
@@ -356,5 +351,47 @@ section .bot{
   padding-left: 45px;
 }
 
+#scrollUp{
+  z-index: 15000000000000;
+  padding: 0.9rem;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px;
+  position: fixed;
+  bottom: 50px;
+  right: 70px;
+  visibility: hidden;
+}
 
+#scrollUp:hover{
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.8) 0px 0px 10px;
+}
 
+#scrollUp img:hover{
+  width: 30px;
+  animation: rotation 0.5s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.right-container{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 20px;
+}
+
+.left-container{
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 20px;
+}

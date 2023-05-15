@@ -10,10 +10,6 @@
     margin-right: 1em;
 }
 
-.img-container img {
-    max-width: 100%;
-    height: auto;
-}
 
 @media screen and (min-width: 768px) {
     .container {
@@ -69,8 +65,15 @@
     height: 10em;
     border-radius: 1.5em;
     text-align: center;
+    transition: all 0.5s ease; /* Add transition property */
 }
 
+.block:hover {
+    margin: 20px;
+    box-shadow: 0 0 10px #000000;
+    transform: scale(1.05); /* Add scale transform */
+    font-size: 2rem;
+}
 
 .e{
     background-color: #10B1B4;
@@ -79,6 +82,7 @@
 .v{
     background-color: #002C4B;
 }
+
 
 .block h2 {
     font-size: 5px;

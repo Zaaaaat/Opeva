@@ -2,8 +2,8 @@
     top: 18rem;
     display: flex;
     flex-direction: column;
-    width: 500px;
-    height: 400px;
+    width: 600px;
+    height: 500px;
     margin: auto;
     background-color: rgba(0, 0, 0, 0.8);
     border-radius: 5px;
@@ -13,8 +13,8 @@
 }
 
 .containerr img {
-    width: 150px;
-    height: 150px;
+    width: 175px;
+    height: 175px;
     border-radius: 50%;
     margin-top: -80px;
     margin-bottom: 30px;
@@ -29,7 +29,7 @@
 
 .containerr input {
     height: 40px;
-    width: 300px;
+    width: 400px;
     font-size: 18px;
     font-family: "Lato";
     margin-bottom: 10px;
@@ -49,20 +49,21 @@
 }
 
 #submit {
-    width: 100px;
-    height: 40px;
+    width: 150px;
+    height: 60px;
     padding: 5px;
     background-color: #3BA8A5;
     border-style: none;
-    margin-top: 30px;
+    margin-top: 40px;
     color: white;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 
 #submit:hover {
     cursor: pointer;
     background-color: #002c4b;
     color: white;
+    transition: 0.2s;
 }
 
 a {
