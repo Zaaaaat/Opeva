@@ -17,26 +17,6 @@ import img from "../Images/overview.png";
 
 
 function Home(){
-
-        const images = [
-            
-            // Add more image URLs as needed
-        ];
-
-        const [currentIndex, setCurrentIndex] = useState(0);
-
-        const goToNextSlide = () => {
-            setCurrentIndex((prevIndex) =>
-                prevIndex === images.length - 1 ? 0 : prevIndex + 1
-            );
-        };
-
-        const goToPrevSlide = () => {
-            setCurrentIndex((prevIndex) =>
-                prevIndex === 0 ? images.length - 1 : prevIndex - 1
-            );
-        };
-
     return (
         <>
             <Navbar/>
@@ -185,20 +165,68 @@ function Home(){
             </section>
 
             <section className="partner-section">
-                <h2>Our Partners...</h2>
-                <div className="slider-container">
-                    {images.map((image, index) => (
-                        <div
-                            className={`slide ${index === currentIndex ? 'active' : ''}`}
-                            key={index}
-                        >
-                            <img src={image} alt={`Slide ${index}`} />
+                <div className="partner-container">
+
+                    <div className="titre-partenaires">
+                        <h2>Our Partners...</h2>
+                    </div>
+
+
+                    <div className="allsquares">
+                        <div className="square">
+                            <a href="about">
+                                <div className="square-text">Energy-efficient power train</div>
+                                <div className="square-hover">
+                                    <img src={plus} alt="know more"/>
+                                    <span>know more</span>
+                                </div>
+                            </a>
                         </div>
-                    ))}
+
+                        <div className="square">
+                            <a href="about">
+                                <div className="square-text">Energy-efficient dynamic routing</div>
+                                <div className="square-hover">
+                                    <img src={plus} alt="know more"/>
+                                    <span>know more</span>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div className="square">
+                            <a href="about">
+                                <div className="square-text">Accurate range prediction</div>
+                                <div className="square-hover">
+                                    <img src={plus} alt="know more"/>
+                                    <span>know more</span>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div className="square">
+                            <a href="about">
+                                <div className="square-text">Accurate range prediction</div>
+                                <div className="square-hover">
+                                    <img src={plus} alt="know more"/>
+                                    <span>know more</span>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div className="square">
+                            <a href="about">
+                                <div className="square-text">Accurate range prediction</div>
+                                <div className="square-hover">
+                                    <img src={plus} alt="know more"/>
+                                    <span>know more</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
                 </div>
-                <button onClick={goToPrevSlide}>Previous</button>
-                <button onClick={goToNextSlide}>Next</button>
             </section>
+
             <Footer/>
         </>
     )
