@@ -174,51 +174,61 @@ function Home(){
 
                     <div className="allsquares">
                         <div className="square">
-                            <a href="about">
-                                <div className="square-text">Energy-efficient power train</div>
+                            <a href="Partner">
+                                <div className="img-squaree">
+                                    <img src={lab} alt="my image" />
+                                </div>
                                 <div className="square-hover">
                                     <img src={plus} alt="know more"/>
-                                    <span>know more</span>
+                                    <span>More partners</span>
                                 </div>
                             </a>
                         </div>
 
                         <div className="square">
-                            <a href="about">
-                                <div className="square-text">Energy-efficient dynamic routing</div>
+                            <a href="Partner">
+                                <div className="img-squaree">
+                                    <img src={lab} alt="my image" />
+                                </div>
                                 <div className="square-hover">
                                     <img src={plus} alt="know more"/>
-                                    <span>know more</span>
+                                    <span>More partners</span>
                                 </div>
                             </a>
                         </div>
 
                         <div className="square">
-                            <a href="about">
-                                <div className="square-text">Accurate range prediction</div>
+                            <a href="Partner">
+                                <div className="img-squaree">
+                                    <img src={lab} alt="my image" />
+                                </div>
                                 <div className="square-hover">
                                     <img src={plus} alt="know more"/>
-                                    <span>know more</span>
+                                    <span>More partners</span>
                                 </div>
                             </a>
                         </div>
 
                         <div className="square">
-                            <a href="about">
-                                <div className="square-text">Accurate range prediction</div>
+                            <a href="Partner">
+                                <div className="img-squaree">
+                                    <img src={lab} alt="my image" />
+                                </div>
                                 <div className="square-hover">
                                     <img src={plus} alt="know more"/>
-                                    <span>know more</span>
+                                    <span>More partners</span>
                                 </div>
                             </a>
                         </div>
 
                         <div className="square">
-                            <a href="about">
-                                <div className="square-text">Accurate range prediction</div>
+                            <a href="Partner">
+                                <div className="img-squaree">
+                                    <img src={lab} alt="my image" />
+                                </div>
                                 <div className="square-hover">
                                     <img src={plus} alt="know more"/>
-                                    <span>know more</span>
+                                    <span>More partners</span>
                                 </div>
                             </a>
                         </div>

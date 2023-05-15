@@ -1,37 +1,61 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../CSS/footer.css';
-import Logo from "../Images/opeva.png";
-import Loupe from "../Images/magnifying-glass.png";
+import bpi from "../Images/bpi.png";
+import europe from "../Images/europe.png";
+import suisse from "../Images/suisse.png";
 
 
-function Navbar() {
+function Footer() {
     return (
         <footer>
-            <h3>Who I am...</h3>
             <div className="footer-container">
 
-                <div className="footer-section">
+                <div className="who">
+                    <h3>Who I am...</h3>
                     <p>European project OPeva</p>
                 </div>
+
                 <div className="footer-section">
                     <p>Funded within the Key Digital Technologies Joint Undertaking (KDT JU)
                         from the European Union’s Horizon Europe Programme and the National Authorities,
                         under grant agreement 101097267.</p>
                 </div>
-                <div className="footer-section">
-                    <h3>Partially Funded By:</h3>
-                    <img src={Logo} alt="Image 1"/>
-                    <img src={Logo} alt="Image 2"/>
-                </div>
-            </div>
-            <div className="footer-bar">
-                <p>OPEVA - OPtimization of Electric Vehicle Autonomy</p>
-                <p>Copyright by Saissac Steve</p>
-            </div>
-        </footer>
 
+                <div className="logo-footer">
+                    <div className="footer-section5">
+                        <h3>Partially Funded By:</h3>
+
+                        <div className="footer-sectionblock">
+                        <div className="footer-section3">
+                        <img src={bpi} alt="Image 1"/>
+                        </div>
+
+                        <div className="footer-section4">
+                        <img src={europe} alt="Image 2"/>
+                        </div>
+                        </div>
+
+                    </div>
+
+                    <div className="footer-section2">
+                        <img src={suisse} alt="Image 3"/>
+                </div>
+                </div>
+
+            </div>
+
+
+                <div className="footer-bar">
+                    <p>OPEVA - OPtimization of Electric Vehicle Autonomy</p>
+                    <p>Copyright by Saissac Steve</p>
+                </div>
+
+
+
+
+        </footer>
 );
 }
 
-export default Navbar;
+export default Footer;

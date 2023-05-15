@@ -1,7 +1,7 @@
 footer {
     background-color: #002C4B;
     color: #FFFFFF;
-    padding: 30px 0;
+    padding: 30px;
 
 }
 
@@ -13,7 +13,7 @@ footer h3{
 
 .footer-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: flex-start;
     max-width: 1200px;
     margin: 0 auto;
@@ -21,6 +21,7 @@ footer h3{
 
 .footer-section {
     width: 30%;
+    padding-top: 1.5rem;
 }
 
 .footer-section h3 {
@@ -33,10 +34,26 @@ footer h3{
     line-height: 1.5;
 }
 
-.footer-section img {
-    width: 50px;
-    height: 50px;
-    margin-right: 10px;
+.footer-section5{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-sectionblock{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.footer-section3 img{
+    width: 115px;
+    padding-top: 1.5rem;
+}
+
+.footer-section4 img{
+    width: 75px;
+    padding-top: 1.5rem;
 }
 
 .footer-bar {
