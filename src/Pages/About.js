@@ -101,87 +101,90 @@ function About(){
 
             <section>
                 <div className="grid">
-                <div className="grid-explainer">
-
-                    <div className="NameWP">
-                        <h3>WP1 :</h3>
-                        <p>Project Management</p>
-                    </div>
-                    <div className="NameWP">
-                        <h3>WP2 :</h3>
-                        <p>Project Management</p>
-                    </div>
-                    <div className="NameWP">
-                        <h3>WP3 :</h3>
-                        <p>Project Management</p>
-                    </div>
-                    <div className="NameWP">
-                        <h3>WP4 :</h3>
-                        <p>Project Management</p>
-                    </div>
-                </div>
 
 
                 <div className="grid-container">
 
                     <div className="rounds3">
+
                     <div className="grid-item">
                         <div className="round"><span className="text">WP1</span></div>
+                        <div className="NameWP">
+                        <h3>WP1 :</h3>
+                        <p>Project Management</p>
+                        </div>
+                    </div>
 
-                    </div>
-                    <div className="grid-item">
-                        <div className="round"><span className="text">WP2</span></div>
-                    </div>
-                    <div className="grid-item">
-                        <div className="round"><span className="text">WP3</span></div>
-                    </div>
+                        <div className="grid-item">
+                            <div className="round"><span className="text">WP1</span></div>
+                            <div className="NameWP">
+                                <h3>WP1 :</h3>
+                                <p>Project Management</p>
+                            </div>
+                        </div>
+
+                        <div className="grid-item">
+                            <div className="round"><span className="text">WP1</span></div>
+                            <div className="NameWP">
+                                <h3>WP1 :</h3>
+                                <p>Project Management</p>
+                            </div>
+                        </div>
+
                     </div>
 
                     <div className="rounds32">
-                    <div className="grid-item">
-                        <div className="round"><span className="text">WP 4</span></div>
-                    </div>
+
+                        <div className="grid-item">
+                            <div className="round"><span className="text">WP1</span></div>
+                            <div className="NameWP">
+                                <h3>WP1 :</h3>
+                                <p>Project Management</p>
+                            </div>
+                        </div>
+
                     <div className="grid-item">
                         <div className="round"><img src={WP} alt="Image"/></div>
+                        <div className="NameWP">
+                            <h3>WP1 :</h3>
+                            <p>Project Management</p>
+                        </div>
                     </div>
-                    <div className="grid-item">
-                        <div className="round"><span className="text">WP 5</span></div>
-                    </div>
+
+                        <div className="grid-item">
+                            <div className="round"><span className="text">WP1</span></div>
+                            <div className="NameWP">
+                                <h3>WP1 :</h3>
+                                <p>Project Management</p>
+                            </div>
+                        </div>
+
                     </div>
 
                     <div className="rounds33">
-                    <div className="grid-item">
-                        <div className="round"><span className="text">WP 6</span></div>
-                    </div>
-                    <div className="grid-item">
-                        <div className="round"><span className="text">WP 7</span></div>
-                    </div>
-                    <div className="grid-item">
-                        <div className="round"><span className="text">WP 8</span></div>
-                    </div>
+                        <div className="grid-item">
+                            <div className="round"><span className="text">WP1</span></div>
+                            <div className="NameWP">
+                                <h3>WP1 :</h3>
+                                <p>Project Management</p>
+                            </div>
+                        </div>
+                        <div className="grid-item">
+                            <div className="round"><span className="text">WP1</span></div>
+                            <div className="NameWP">
+                                <h3>WP1 :</h3>
+                                <p>Project Management</p>
+                            </div>
+                        </div>
+                        <div className="grid-item">
+                            <div className="round"><span className="text">WP1</span></div>
+                            <div className="NameWP">
+                                <h3>WP1 :</h3>
+                                <p>Project Management</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
-
-                    <div className="grid-explainer2">
-
-                        <div className="NameWP">
-                            <h3>WP5 :</h3>
-                            <p>Project Management</p>
-                        </div>
-                        <div className="NameWP">
-                            <h3>WP6 :</h3>
-                            <p>Project Management</p>
-                        </div>
-                        <div className="NameWP">
-                            <h3>WP7 :</h3>
-                            <p>Project Management</p>
-                        </div>
-                        <div className="NameWP">
-                            <h3>WP8 :</h3>
-                            <p>Project Management</p>
-                        </div>
-                    </div>
 
                 </div>
             </section>
