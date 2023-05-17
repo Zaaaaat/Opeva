@@ -1,4 +1,4 @@
-.container {
+.container-ow {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -12,7 +12,7 @@
 
 
 @media screen and (min-width: 768px) {
-    .container {
+    .container-ow {
         flex-direction: row;
     }
 
@@ -35,7 +35,7 @@
     flex-direction: column;
 }
 
-.text-container{
+.text-container-ow{
     color: #033E5F;
 }
 
@@ -147,7 +147,14 @@
     width: 8em;
     height: 8em;
     border-radius: 50%;
+}
+
+.greenn{
     background-color: #10B1B4;
+}
+
+.bluee{
+    background-color: #0e7ccb;
 }
 
 .round img {
@@ -155,29 +162,50 @@
     max-height: 100%;
 }
 
-.text {
+.textt {
     display: block;
-    margin-top: 0.5em;
     text-align: center;
-    color: #033E5F;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+}
+
+.rounds3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rounds32 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grid-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grid-container p{
+    max-width: 250px
+}
+
+.NameWP{
     font-size: 1em;
     font-weight: bold;
+    color: #033E5F;
+    text-align: center;
+    padding: 15px;
 }
 
-.round3{
-    display:flex;
-    flex-direction: row;
+.rounds33 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.round32{
-    display:flex;
-    flex-direction: row;
-}
-
-.round33{
-    display:flex;
-    flex-direction: row;
-}
 
 .round img{
     border-radius: 50%;

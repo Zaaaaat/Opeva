@@ -22,7 +22,7 @@ function About(){
             </section>
 
             <section>
-            <div className="container">
+            <div className="container-ow">
                 <div className="img-container">
                     <img src={img} alt="my image" />
                 </div>
@@ -108,27 +108,27 @@ function About(){
                     <div className="rounds3">
 
                     <div className="grid-item">
-                        <div className="round"><span className="text">WP1</span></div>
                         <div className="NameWP">
-                        <h3>WP1 :</h3>
-                        <p>Project Management</p>
+                            <p>Requirement Analysis</p>
                         </div>
+                        <div className="round bluee"><span className="textt">WP1</span></div>
+
                     </div>
 
                         <div className="grid-item">
-                            <div className="round"><span className="text">WP1</span></div>
                             <div className="NameWP">
-                                <h3>WP1 :</h3>
-                                <p>Project Management</p>
+                                <p>Battery Management System</p>
                             </div>
+                            <div className="round greenn"><span className="textt">WP4</span></div>
+
                         </div>
 
                         <div className="grid-item">
-                            <div className="round"><span className="text">WP1</span></div>
                             <div className="NameWP">
-                                <h3>WP1 :</h3>
-                                <p>Project Management</p>
+                                <p>Demonstrators</p>
                             </div>
+                            <div className="round greenn"><span className="textt">WP6</span></div>
+
                         </div>
 
                     </div>
@@ -136,52 +136,47 @@ function About(){
                     <div className="rounds32">
 
                         <div className="grid-item">
-                            <div className="round"><span className="text">WP1</span></div>
+                            <div className="round greenn"><span className="textt">WP2</span></div>
                             <div className="NameWP">
-                                <h3>WP1 :</h3>
-                                <p>Project Management</p>
+                                <p>Design Architecture Optimization</p>
                             </div>
                         </div>
 
                     <div className="grid-item">
-                        <div className="round"><img src={WP} alt="Image"/></div>
-                        <div className="NameWP">
-                            <h3>WP1 :</h3>
-                            <p>Project Management</p>
-                        </div>
+                        <div className="round greenn"><img src={WP} alt="Image"/></div>
                     </div>
 
                         <div className="grid-item">
-                            <div className="round"><span className="text">WP1</span></div>
                             <div className="NameWP">
-                                <h3>WP1 :</h3>
-                                <p>Project Management</p>
+                                <p>Dissemination, Exploitation and Communication</p>
                             </div>
+                            <div className="round bluee"><span className="textt">WP7</span></div>
+
                         </div>
 
                     </div>
 
                     <div className="rounds33">
                         <div className="grid-item">
-                            <div className="round"><span className="text">WP1</span></div>
                             <div className="NameWP">
-                                <h3>WP1 :</h3>
-                                <p>Project Management</p>
+                                <p>Smart Data Management</p>
                             </div>
+                            <div className="round bluee"><span className="textt">WP3</span></div>
+
                         </div>
                         <div className="grid-item">
-                            <div className="round"><span className="text">WP1</span></div>
                             <div className="NameWP">
-                                <h3>WP1 :</h3>
-                                <p>Project Management</p>
+                                <p>Intelligent Energy Management</p>
                             </div>
+                            <div className="round greenn"><span className="textt">WP5</span></div>
+
                         </div>
                         <div className="grid-item">
-                            <div className="round"><span className="text">WP1</span></div>
                             <div className="NameWP">
-                                <h3>WP1 :</h3>
                                 <p>Project Management</p>
                             </div>
+                            <div className="round greenn"><span className="textt">WP8</span></div>
+
                         </div>
                     </div>
                 </div>

@@ -87,7 +87,7 @@ function Navbar() {
     return (
         <div className="rectangle-nav">
             <nav className="navbar">
-                <a href="#" className="logo">
+                <a href="/" className="logo">
                     <img className="Logo" src={Logo} alt="logo" />
                 </a>
 
@@ -113,7 +113,7 @@ function Navbar() {
 
                     <a href="/News">NEWS</a>
                     <div className="dropdown">
-                        <a href="/Deliverables">PUBLICATIONS</a>
+                        <a href="/">PUBLICATIONS</a>
                         <ul>
                             <li>
                                 <a href="/Deliverables">Deliverables</a>
