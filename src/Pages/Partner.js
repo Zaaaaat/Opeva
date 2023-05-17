@@ -4,6 +4,13 @@ import '../CSS/Partners.css';
 import Navbar from '../components/Navbar.js';
 import Footer from '../components/Footer.js';
 import europe from "../Images/europep.png";
+import ugeneve from "../Images/Partners/Ugeneve.png";
+import unipr from "../Images/Partners/UNIPR.png";
+import vub from "../Images/Partners/VUB.png";
+import ESOGU from "../Images/Partners/ESOGU.png";
+import UPerugia from "../Images/Partners/UPerugia.png";
+import ULR from "../Images/Partners/ULR.png";
+import UB from "../Images/Partners/UB.png";
 
 function Partners(){
     return(
@@ -31,34 +38,41 @@ function Partners(){
 
             <div className="image-grid">
                 <div className="image-block">
-                    <img src="image1.jpg" alt="image1" />
+                    <a href="https://www.unige.ch/"><img src={ugeneve} alt="image1" /></a>
+                </div>
+
+
+
+                <div className="image-block">
+                    <a href="https://www.ogu.edu.tr/"><img src={ESOGU} alt="image1" /></a>
+                </div>
+
+                <div className="image-block">
+                    <a href="https://www.unipr.it/"><img src={unipr} alt="image1" /></a>
+                </div>
+
+                <div className="image-block">
+                    <a href="https://www.vub.be/en"><img src={vub} alt="image1" /></a>
+                </div>
+
+                <div className="image-block">
+                    <a href="https://www.univ-larochelle.fr/"><img src={ULR} alt="image1" /></a>
+                </div>
+
+                <div className="image-block">
+                    <a href="https://www.u-bourgogne.fr/"><img src={UB} alt="image1" /></a>
                 </div>
                 <div className="image-block">
-                    <img src="image2.jpg" alt="image2" />
+                    <a href="https://www.unipg.it/"><img src={UPerugia} alt="image1" /></a>
                 </div>
                 <div className="image-block">
-                    <img src="image3.jpg" alt="image3" />
+                    <a href="https://www.ogu.edu.tr/"><img src={ugeneve} alt="image1" /></a>
                 </div>
                 <div className="image-block">
-                    <img src="image4.jpg" alt="image4" />
+                    <a href="https://www.ogu.edu.tr/"><img src={ugeneve} alt="image1" /></a>
                 </div>
                 <div className="image-block">
-                    <img src="image5.jpg" alt="image5" />
-                </div>
-                <div className="image-block">
-                    <img src="image6.jpg" alt="image6" />
-                </div>
-                <div className="image-block">
-                    <img src="image7.jpg" alt="image7" />
-                </div>
-                <div className="image-block">
-                    <img src="image8.jpg" alt="image8" />
-                </div>
-                <div className="image-block">
-                    <img src="image9.jpg" alt="image9" />
-                </div>
-                <div className="image-block">
-                    <img src="image10.jpg" alt="image10" />
+                    <a href="https://www.ogu.edu.tr/"><img src={ugeneve} alt="image1" /></a>
                 </div>
             </div>
 
@@ -68,35 +82,36 @@ function Partners(){
 
             <div className="image-grid">
                 <div className="image-block">
-                    <img src="image1.jpg" alt="image1" />
+                    <a href="https://www.ogu.edu.tr/"><img src={ugeneve} alt="image1" /></a>
                 </div>
                 <div className="image-block">
-                    <img src="image2.jpg" alt="image2" />
+                    <a href="https://www.ogu.edu.tr/"><img src={ugeneve} alt="image1" /></a>
                 </div>
                 <div className="image-block">
-                    <img src="image3.jpg" alt="image3" />
+                    <a href="https://www.ogu.edu.tr/"><img src={ugeneve} alt="image1" /></a>
                 </div>
                 <div className="image-block">
-                    <img src="image4.jpg" alt="image4" />
+                    <a href="https://www.ogu.edu.tr/"><img src={ugeneve} alt="image1" /></a>
                 </div>
                 <div className="image-block">
-                    <img src="image5.jpg" alt="image5" />
+                    <a href="https://www.ogu.edu.tr/"><img src={ugeneve} alt="image1" /></a>
                 </div>
                 <div className="image-block">
-                    <img src="image6.jpg" alt="image6" />
+                    <a href="https://www.ogu.edu.tr/"><img src={ugeneve} alt="image1" /></a>
                 </div>
                 <div className="image-block">
-                    <img src="image7.jpg" alt="image7" />
+                    <a href="https://www.ogu.edu.tr/"><img src={ugeneve} alt="image1" /></a>
                 </div>
                 <div className="image-block">
-                    <img src="image8.jpg" alt="image8" />
+                    <a href="https://www.ogu.edu.tr/"><img src={ugeneve} alt="image1" /></a>
                 </div>
                 <div className="image-block">
-                    <img src="image9.jpg" alt="image9" />
+                    <a href="https://www.ogu.edu.tr/"><img src={ugeneve} alt="image1" /></a>
                 </div>
                 <div className="image-block">
-                    <img src="image10.jpg" alt="image10" />
+                    <a href="https://www.ogu.edu.tr/"><img src={ugeneve} alt="image1" /></a>
                 </div>
+
             </div>
 
 

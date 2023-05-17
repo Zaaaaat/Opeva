@@ -4,8 +4,16 @@ import "@fortawesome/fontawesome-free/css/all.css";
 import '../CSS/demos.css';
 import Navbar from '../components/Navbar.js';
 import Footer from '../components/Footer.js';
-import demos1 from "../Images/demo1.png";
-
+import demos1 from "../Images/Demos/demo1.png";
+import demos2 from "../Images/Demos/demos2.png";
+import demos3 from "../Images/Demos/demos3.png";
+import demos4 from "../Images/Demos/demos4.png";
+import demos5 from "../Images/Demos/demos5.png";
+import demos6 from "../Images/Demos/demos6.png";
+import demos7 from "../Images/Demos/demos7.png";
+import demos8 from "../Images/Demos/demos8.png";
+import demos9 from "../Images/Demos/demos9.png";
+import demos10 from "../Images/Demos/demos10.png";
 
 function Demos(){
     const [showCategories, setShowCategories] = useState(false);
@@ -92,7 +100,8 @@ function Demos(){
                 </div>
                 <ul className={`categories-list ${showCategories1 ? "open" : ""}`}>
                     <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
-                        <img src={demos1} alt="demos1"/>
+                        <img src={demos2} alt="demos2"/>
+                        <img src={demos3} alt="demos3"/>
                     </li>
                 </ul>
 
@@ -105,7 +114,7 @@ function Demos(){
                 </div>
                 <ul className={`categories-list ${showCategories2 ? "open" : ""}`}>
                     <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
-                        <img src={demos1} alt="demos1"/>
+                        <img src={demos4} alt="demos4"/>
                     </li>
                 </ul>
 
@@ -118,7 +127,7 @@ function Demos(){
                 </div>
                 <ul className={`categories-list ${showCategories3 ? "open" : ""}`}>
                     <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
-                        <img src={demos1} alt="demos1"/>
+                        <img src={demos5} alt="demos5"/>
                     </li>
                 </ul>
 
@@ -131,7 +140,7 @@ function Demos(){
                 </div>
                 <ul className={`categories-list ${showCategories4 ? "open" : ""}`}>
                     <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
-                        <img src={demos1} alt="demos1"/>
+                        <img src={demos6} alt="demos6"/>
                     </li>
                 </ul>
 
@@ -144,7 +153,7 @@ function Demos(){
                 </div>
                 <ul className={`categories-list ${showCategories5 ? "open" : ""}`}>
                     <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
-                        <img src={demos1} alt="demos1"/>
+                        <img src={demos7} alt="demos7"/>
                     </li>
                 </ul>
 
@@ -157,7 +166,7 @@ function Demos(){
                 </div>
                 <ul className={`categories-list ${showCategories6 ? "open" : ""}`}>
                     <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
-                        <img src={demos1} alt="demos1"/>
+                        <img src={demos8} alt="demos8"/>
                     </li>
                 </ul>
 
@@ -170,7 +179,7 @@ function Demos(){
                 </div>
                 <ul className={`categories-list ${showCategories7 ? "open" : ""}`}>
                     <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
-                        <img src={demos1} alt="demos1"/>
+                        <img src={demos9} alt="demos9"/>
                     </li>
                 </ul>
 
@@ -183,7 +192,7 @@ function Demos(){
                 </div>
                 <ul className={`categories-list ${showCategories8 ? "open" : ""}`}>
                     <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
-                        <img src={demos1} alt="demos1"/>
+                        <img src={demos10} alt="demos10"/>
                     </li>
                 </ul>
 

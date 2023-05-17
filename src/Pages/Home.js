@@ -13,10 +13,10 @@ import top from "../Images/to_top.png";
 import stat from "../Images/stat.png";
 import img from "../Images/overview.png";
 
-
-
-
 function Home(){
+
+
+
     return (
         <>
             <Navbar/>

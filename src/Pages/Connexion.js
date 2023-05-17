@@ -29,7 +29,10 @@ function Connexion() {
             navigate("/");
         } catch (error) {
             console.error(error);
+            setValidation("Email ou mot de passe incorrect");
         }
+
+
     };
 
     return (

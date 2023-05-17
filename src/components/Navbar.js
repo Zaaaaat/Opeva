@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, {useEffect, useState} from 'react';
 import { Link } from 'react-router-dom';
 import '../CSS/navbar.css';
 import Logo from "../Images/opeva.png";
@@ -8,6 +8,7 @@ import CloseMenu from "../Images/cross.png";
 
 function Navbar() {
 
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [isOpen, setIsOpen] = React.useState(false);
 
     const toggleMenu = () => {
@@ -126,7 +127,13 @@ function Navbar() {
 
 
                     <a href="/Contact">CONTACT</a>
-                    <a href="/Connexion">CONNEXION</a>
+                    {isLoggedIn ? (
+                        <a href="/Profil">PROFIL</a>
+                    ) : (
+                        <a href="/Connexion">CONNEXION</a>
+                    )}
+
+
 
                 </div>
 

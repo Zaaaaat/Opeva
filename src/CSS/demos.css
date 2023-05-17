@@ -67,11 +67,12 @@
 }
 
 .categories-container li {
+    display: flex;
     padding-top: 15px;
     color: #9b9b9b;
-    max-width: 80%;
     margin: 0 auto;
     transition: 0.2s ease;
+    flex-direction: column;
 }
 
 .categories-container img {

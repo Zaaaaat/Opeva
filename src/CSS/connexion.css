@@ -41,6 +41,10 @@
     position: relative;
 }
 
+.validation{
+    color: red;
+}
+
 .fa-lock, .fa-user {
     position: absolute;
     top: 8px;
