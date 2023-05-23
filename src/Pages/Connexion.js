@@ -2,7 +2,6 @@ import React, { useRef, useState } from "react";
 import "../CSS/home.css";
 import "../CSS/connexion.css";
 import { Link, useNavigate } from "react-router-dom";
-
 import utilisateur from "../Images/logo-opeva.jpg";
 import { auth, signInWithEmailAndPassword } from "../firebase.config.js";
 
@@ -10,6 +9,7 @@ function Connexion() {
     const navigate = useNavigate();
 
     const [validation, setValidation] = useState("");
+    const [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem("isLoggedIn") === "true");
 
     const inputs = useRef([]);
     const addInputs = (el) => {
@@ -24,15 +24,15 @@ function Connexion() {
         const password = event.target.elements.password.value;
 
         try {
-            await signInWithEmailAndPassword(auth, email, password); // Utilisation de la fonction importée directement
+            await signInWithEmailAndPassword(auth, email, password);
             console.log("Successfully signed in!");
+            localStorage.setItem("isLoggedIn", true);
+            setIsLoggedIn(true);
             navigate("/");
         } catch (error) {
             console.error(error);
             setValidation("Email ou mot de passe incorrect");
         }
-
-
     };
 
     return (
@@ -55,6 +55,7 @@ function Connexion() {
                         <input ref={addInputs} type="submit" id="submit" value="VALIDER" />
                         <br />
                         <a href="#">forget password?</a>
+                        {isLoggedIn && <Link to="/AddNews">Nouveau post</Link>}
                     </div>
                 </form>
             </div>

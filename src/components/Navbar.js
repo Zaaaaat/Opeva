@@ -1,15 +1,22 @@
 import React, {useEffect, useState} from 'react';
-import { Link } from 'react-router-dom';
 import '../CSS/navbar.css';
 import Logo from "../Images/opeva.png";
 import Loupe from "../Images/magnifying-glass.png";
 import BurgerMenu from "../Images/menu.png";
 import CloseMenu from "../Images/cross.png";
+import { Link, useNavigate } from "react-router-dom";
 
 function Navbar() {
 
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem("isLoggedIn") === "true");
     const [isOpen, setIsOpen] = React.useState(false);
+
+    const navigate = useNavigate();
+    const handleLogout = () => {
+        localStorage.removeItem("isLoggedIn");
+        setIsLoggedIn(false);
+        navigate("/");
+    };
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
@@ -128,7 +135,17 @@ function Navbar() {
 
                     <a href="/Contact">CONTACT</a>
                     {isLoggedIn ? (
-                        <a href="/Profil">PROFIL</a>
+                        <div className="dropdown">
+                            <a href="/">ADMIN</a>
+                            <ul>
+                                <li>
+                                    <a href="/Profil">Profil</a>
+                                </li>
+                                <li>
+                                    <a href="#" onClick={handleLogout}>Logout</a>
+                                </li>
+                            </ul>
+                        </div>
                     ) : (
                         <a href="/Connexion">CONNEXION</a>
                     )}

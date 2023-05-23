@@ -6,8 +6,9 @@ import '../CSS/news.css';
 import Navbar from '../components/Navbar.js';
 import Footer from '../components/Footer.js';
 
-function News() {
+function MediaNews() {
     const [newsList, setNewsList] = useState([]);
+    const [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem("isLoggedIn") === "true");
 
     useEffect(() => {
         const newsRef = ref(database, "news");
@@ -24,8 +25,11 @@ function News() {
                     const description = news.description;
                     const date = news.date;
                     const title = news.title;
+                    const type = news.type;
 
-                    newsArray.push({ imageURL, description, date });
+                    if (type === "media") { // Filtrer les news de type "media"
+                        newsArray.push({ imageURL, description, date });
+                    }
                 });
 
                 setNewsList(newsArray);
@@ -40,23 +44,23 @@ function News() {
             </div>
 
             <div className="nav-bar-rectangle">
-                <span>NEWS & EVENTS</span>
+                <span>MEDIAS</span>
             </div>
 
             <div className="container">
                 <div className="blockdivbardav">
-                {newsList.map((news, index) => (
-                    <div className="news-section" key={index}>
-                        <div className="news-block">
-                            <img src={news.imageURL} alt="Image de la news" />
+                    {newsList.map((news, index) => (
+                        <div className="news-section" key={index}>
+                            <div className="news-block">
+                                <img src={news.imageURL} alt="Image de la news" />
+                            </div>
+                            <div className="news-details">
+                                {isLoggedIn && <p className="know-more">Know More</p>}
+                                <p className="date">{news.date}</p>
+                            </div>
                         </div>
-                        <div className="news-details">
-                            <p className="know-more">Know More</p>
-                            <p className="date">{news.date}</p>
-                        </div>
-                    </div>
-                ))}
-            </div>
+                    ))}
+                </div>
 
 
                 <div className="sidebar">
@@ -71,10 +75,10 @@ function News() {
                         <ul>
                             <div className="line1">
                                 <a href="/EventNews"> <li>Event</li> </a>
-                                <a href="/MediaNews"> <li>Media</li> </a>
+                                <a href="/News"> <li>All</li> </a>
                             </div>
                             <div className="line">
-                                <a href="/AddNews"> <li>New post</li> </a>
+                                {isLoggedIn && <a href="/AddNews"> <li>New post</li> </a>}
                             </div>
                         </ul>
                     </div>
@@ -86,4 +90,4 @@ function News() {
     )
 }
 
-export default News;
+export default MediaNews;

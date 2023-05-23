@@ -8,6 +8,10 @@
   background-repeat: no-repeat;
 }
 
+.centered h1{
+  color: white;
+}
+
 .overlay {
   font-family: Arial, Helvetica, sans-serif;
   position: absolute;
@@ -145,10 +149,6 @@
     color: #666;
   }
 
-  .about {
-    display: flex;
-    flex-direction: row;
-  }
 }
 
 @media screen and (max-width: 750px) {
