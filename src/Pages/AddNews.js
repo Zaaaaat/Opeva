@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../CSS/topEachPage.css';
 import '../CSS/AddNews.css';
 import Navbar from '../components/Navbar.js';
@@ -6,25 +6,41 @@ import Footer from '../components/Footer.js';
 import { database, firebaseConfig } from "../firebase.config.js";
 import { set, ref, push } from "firebase/database";
 import { initializeApp } from "firebase/app";
-import { getStorage, ref as storageRef, uploadBytes } from "firebase/storage"; // Import necessary functions from firebase/storage
 import { Link, useNavigate } from "react-router-dom";
+import { ref as storageRef, uploadBytes, getDownloadURL, listAll } from "firebase/storage";
+import { storage } from "../firebase.config.js";
 
 function AddNews() {
     const app = initializeApp(firebaseConfig);
     const navigate = useNavigate();
     const [newsType, setNewsType] = useState("");
     const [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem("isLoggedIn") === "true");
+    const [imageUpload, setImageUpload] = useState(null);
+    const [imageURL, setImageURL] = useState("");
+
+    useEffect(() => {
+        listAll(storageRef(storage, "images/")).then((response) => {
+            response.items.forEach((item) => {
+                getDownloadURL(item).then((url) => {
+                    console.log(url);
+                });
+            });
+        });
+    }, []);
 
     function addNews(imageURL, description, title, type) {
         const newsRef = ref(database, "news");
         const newNewsRef = push(newsRef);
         const newsID = newNewsRef.key;
 
+        const currentDate = new Date().toISOString();
+
         return set(newNewsRef, {
             imageURL: imageURL,
             description: description,
             title: title,
             type: type,
+            date: currentDate,
         }).then(() => newsID);
     }
 
@@ -32,36 +48,26 @@ function AddNews() {
         event.preventDefault();
 
         if (isLoggedIn) {
-            const imageURL = document.getElementById("image").value;
             const description = document.getElementById("description").value;
             const title = document.getElementById("title").value;
 
-            // Création de la référence à l'espace de stockage
-            const storage = getStorage(app);
-
-            // Création de la référence spécifique à l'image
-            const storageRef = ref(storage, "images/" + title + ".jpg");
-
-            // Upload de l'image vers Firebase Storage
-            uploadBytes(storageRef, document.getElementById("image").files[0])
-                .then(() => {
-                    // L'image a été correctement stockée
-                    console.log("L'image a été stockée avec succès.");
-
-                    // Ajout de l'article dans la base de données
-                    addNews(imageURL, description, title, newsType)
-                        .then((newsID) => {
-                            console.log("Actualité ajoutée avec ID :", newsID);
-                            navigate("/News");
-                        })
-                        .catch((error) => {
-                            console.log("Erreur lors de l'ajout de l'actualité :", error);
-                        });
-                })
-                .catch((error) => {
-                    // Une erreur s'est produite lors du stockage de l'image
-                    console.log("Erreur lors du stockage de l'image :", error);
+            if (imageUpload) {
+                const imageRef = storageRef(storage, `images/${imageUpload.name}`);
+                uploadBytes(imageRef, imageUpload).then((snapshot) => {
+                    getDownloadURL(snapshot.ref).then((url) => {
+                        addNews(url, description, title, newsType)
+                            .then((newsID) => {
+                                console.log("Actualité ajoutée avec ID :", newsID);
+                                navigate("/News");
+                            })
+                            .catch((error) => {
+                                console.log("Erreur lors de l'ajout de l'actualité :", error);
+                            });
+                    });
                 });
+            } else {
+                alert("Veuillez sélectionner une image.");
+            }
         } else {
             alert("Veuillez vous connecter pour publier un article.");
         }
@@ -130,7 +136,15 @@ function AddNews() {
 
                     <div className="rect-form">
                         <label htmlFor="name">Add image *</label>
-                        <input type="file" id="image" name="image" required />
+                        <input
+                            type="file"
+                            id="image"
+                            name="image"
+                            onChange={(event) => {
+                                setImageUpload(event.target.files[0]);
+                            }}
+                            required
+                        />
                     </div>
                 </div>
 

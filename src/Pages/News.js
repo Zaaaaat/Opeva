@@ -25,7 +25,7 @@ function News() {
                     const date = news.date;
                     const title = news.title;
 
-                    newsArray.push({ imageURL, description, date });
+                    newsArray.push({ imageURL, description, date, title });
                 });
 
                 setNewsList(newsArray);
@@ -45,21 +45,27 @@ function News() {
 
             <div className="container">
                 <div className="blockdivbardav">
-                {newsList.map((news, index) => (
-                    <div className="news-section" key={index}>
-                        <div className="news-block">
-                            <img src={news.imageURL} alt="Image de la news" />
+                    {newsList.map((news, index) => (
+                        <div className="news-section" key={index}>
+                            <div className="news-block">
+                                <img src={news.imageURL} alt="Image de la news" />
+                            </div>
+                            <div className="news-details">
+                                <h2 className="title">{news.title}</h2>
+                                <p className="description">{news.description}</p>
+                                <hr className="dotted-line" />
+                                <div className="moreabout">
+                                <p className="know-more">Know More</p>
+                                <p className="date">{news.date}</p>
+                                </div>
+                            </div>
                         </div>
-                        <div className="news-details">
-                            <p className="know-more">Know More</p>
-                            <p className="date">{news.date}</p>
-                        </div>
-                    </div>
-                ))}
-            </div>
+                    ))}
+                </div>
 
 
-                <div className="sidebar">
+
+            <div className="sidebar">
                     <label htmlFor="keyword">SEARCH :</label>
                     <div className="search">
                         <input type="text" id="keyword" placeholder="Enter keywords..." />
