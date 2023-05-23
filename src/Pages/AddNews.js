@@ -9,6 +9,8 @@ import { initializeApp } from "firebase/app";
 import { Link, useNavigate } from "react-router-dom";
 import { ref as storageRef, uploadBytes, getDownloadURL, listAll } from "firebase/storage";
 import { storage } from "../firebase.config.js";
+import { format } from 'date-fns';
+
 
 function AddNews() {
     const app = initializeApp(firebaseConfig);
@@ -17,6 +19,8 @@ function AddNews() {
     const [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem("isLoggedIn") === "true");
     const [imageUpload, setImageUpload] = useState(null);
     const [imageURL, setImageURL] = useState("");
+    const currentDate = format(new Date(), 'yyyy-MM-dd HH:mm:ss');
+
 
     useEffect(() => {
         listAll(storageRef(storage, "images/")).then((response) => {

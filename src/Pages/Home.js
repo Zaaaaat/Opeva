@@ -1,4 +1,9 @@
-import React,  { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { ref, get } from 'firebase/database';
+import { database, firebaseConfig } from "../firebase.config.js";
+import { format } from 'date-fns';
+
+
 import '../CSS/home.css';
 import '../CSS/slider.css';
 
@@ -15,6 +20,42 @@ import img from "../Images/overview.png";
 
 function Home(){
 
+    const [latestNews, setLatestNews] = useState([]);
+
+    useEffect(() => {
+        const newsRef = ref(database, 'news');
+
+        // Récupérer les données des news depuis la base de données
+        get(newsRef).then((snapshot) => {
+            if (snapshot.exists()) {
+                const newsData = snapshot.val();
+
+                const newsArray = [];
+                snapshot.forEach((childSnapshot) => {
+                    const news = childSnapshot.val();
+                    const imageURL = news.imageURL;
+                    const description = news.description;
+                    const date = news.date;
+                    const title = news.title;
+
+                    newsArray.push({ imageURL, description, date, title });
+                });
+
+                newsArray.sort((a, b) => new Date(b.date) - new Date(a.date));
+                const latestNews = newsArray.reverse().slice(0, 2);
+
+                const formattedLatestNews = latestNews.map((news) => ({
+                    ...news,
+                    date: format(new Date(news.date), 'yyyy-MM-dd HH:mm:ss'),
+                }));
+
+                setLatestNews(formattedLatestNews);
+
+
+
+            }
+        });
+    }, []);
 
 
     return (
@@ -162,7 +203,26 @@ function Home(){
 
             <section className="botnews">
                 <p className="news-text">What are the recent news...</p>
+                <div className="blockdivbardav">
+                    {latestNews.map((news, index) => (
+                        <div className="news-section" key={index}>
+                            <div className="news-block">
+                                <img src={news.imageURL} alt="Image de la news" />
+                            </div>
+                            <div className="news-details">
+                                <h2 className="title">{news.title}</h2>
+                                <p className="description">{news.description}</p>
+                                <hr className="dotted-line" />
+                                <div className="moreabout">
+                                    <p className="know-more">Know More</p>
+                                    <p className="date">{news.date}</p>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
             </section>
+
 
             <section className="partner-section">
                 <div className="partner-container">
