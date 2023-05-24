@@ -5,7 +5,7 @@ import '../CSS/profil.css';
 import Navbar from '../components/Navbar.js';
 import Footer from '../components/Footer.js';
 import { auth } from '../firebase.config.js';
-import 'firebase/auth';
+import { getAuth, sendPasswordResetEmail } from 'firebase/auth';
 
 function Profil() {
 
@@ -17,9 +17,9 @@ function Profil() {
 
         if (user) {
             const email = user.email;
-            auth.sendPasswordResetEmail(email)
+            sendPasswordResetEmail(auth, email)
                 .then(() => {
-                    alert('Un e-mail de réinitialisation du mot de passe a été envoyé à votre adresse e-mail.');
+                    alert('A password reset email has been sent to your email address. Don\'t forget to check your junk mail or spam.');
                 })
                 .catch((error) => {
                     console.error(error);
@@ -71,7 +71,7 @@ function Profil() {
                     <div className="update-section">
                         <h1>Update profil :</h1>
                         <div className="form-input">
-                            <h4>New username :</h4>
+                            <h4>Admin name :</h4>
                             <input type="text" id="username" value={username} onChange={handleUsernameChange} />
                         </div>
                         <div className="form-pwd">

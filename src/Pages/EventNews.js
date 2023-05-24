@@ -27,7 +27,7 @@ function EventNews() {
                     const type = news.type;
 
                     if (type === "event") { // Filtrer les news de type "event"
-                        newsArray.push({ imageURL, description, date });
+                        newsArray.push({ imageURL, description, date, type, title });
                     }
                 });
 
@@ -54,8 +54,13 @@ function EventNews() {
                                 <img src={news.imageURL} alt="Image de la news" />
                             </div>
                             <div className="news-details">
-                                <p className="know-more">Know More</p>
-                                <p className="date">{news.date}</p>
+                                <h2 className="title">{news.title}</h2>
+                                <p className="description">{news.description}</p>
+                                <hr className="dotted-line" />
+                                <div className="moreabout">
+                                    <p className="know-more">{news.type}</p>
+                                    <p className="date">{news.date}</p>
+                                </div>
                             </div>
                         </div>
                     ))}

@@ -110,7 +110,7 @@ function AddNews() {
                                 id="media"
                                 name="type"
                                 value="media"
-                                checked={newsType === "media"}
+                                checked={newsType === "In Media"}
                                 onChange={handleTypeChange}
                                 required
                             />
@@ -124,7 +124,7 @@ function AddNews() {
                                 id="event"
                                 name="type"
                                 value="event"
-                                checked={newsType === "event"}
+                                checked={newsType === "In Event"}
                                 onChange={handleTypeChange}
                                 required
                             />

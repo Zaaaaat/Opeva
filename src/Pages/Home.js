@@ -3,9 +3,7 @@ import { ref, get } from 'firebase/database';
 import { database, firebaseConfig } from "../firebase.config.js";
 import { format } from 'date-fns';
 
-
 import '../CSS/home.css';
-import '../CSS/slider.css';
 
 import Navbar from '../components/Navbar.js';
 import Footer from '../components/Footer.js';
@@ -37,8 +35,9 @@ function Home(){
                     const description = news.description;
                     const date = news.date;
                     const title = news.title;
+                    const type = news.type;
 
-                    newsArray.push({ imageURL, description, date, title });
+                    newsArray.push({ imageURL, description, date, title, type });
                 });
 
                 newsArray.sort((a, b) => new Date(b.date) - new Date(a.date));
@@ -214,7 +213,7 @@ function Home(){
                                 <p className="description">{news.description}</p>
                                 <hr className="dotted-line" />
                                 <div className="moreabout">
-                                    <p className="know-more">Know More</p>
+                                    <p className="know-more">{news.type}</p>
                                     <p className="date">{news.date}</p>
                                 </div>
                             </div>

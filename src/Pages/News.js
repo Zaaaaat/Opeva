@@ -24,8 +24,9 @@ function News() {
                     const description = news.description;
                     const date = news.date;
                     const title = news.title;
+                    const type = news.type;
 
-                    newsArray.push({ imageURL, description, date, title });
+                    newsArray.push({ imageURL, description, date, title, type });
                 });
 
                 setNewsList(newsArray);
@@ -55,7 +56,7 @@ function News() {
                                 <p className="description">{news.description}</p>
                                 <hr className="dotted-line" />
                                 <div className="moreabout">
-                                <p className="know-more">Know More</p>
+                                <p className="know-more">{news.type}</p>
                                 <p className="date">{news.date}</p>
                                 </div>
                             </div>
