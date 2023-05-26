@@ -116,6 +116,18 @@ p {
     align-items: flex-start;
 }
 
+.form-container{
+    box-shadow: 0 0 10px rgba(0, 16, 60, 0.1);
+}
+
+/*.form-container input{*/
+/*    box-shadow: inset 0 0 5px rgba(0, 16, 60, 0.1);*/
+/*}*/
+
+/*.form-container textarea{*/
+/*    box-shadow: inset 0 0 5px rgba(0, 16, 60, 0.1);*/
+/*}*/
+
 .image-plus{
     width: 100%;
     display: flex;

@@ -20,7 +20,7 @@ function AddNews() {
     const [imageUpload, setImageUpload] = useState(null);
     const [imageURL, setImageURL] = useState("");
     const currentDate = format(new Date(), 'yyyy-MM-dd HH:mm:ss');
-
+    const [newsArray, setNewsArray] = useState([]); // Ajout du state pour les news
 
     useEffect(() => {
         listAll(storageRef(storage, "images/")).then((response) => {
@@ -29,13 +29,32 @@ function AddNews() {
                     console.log(url);
                 });
             });
-        });
+        },[newsArray]);
+
+        // Récupérer les données de la base de données pour les news
+        const newsRef = ref(database, "news");
+        const getNewsData = async () => {
+            const snapshot = await database.ref(newsRef).once("value");
+            const newsData = snapshot.val();
+
+            if (newsData) {
+                const newsList = Object.keys(newsData).map((key) => ({
+                    id: key,
+                    ...newsData[key]
+                }));
+
+                setNewsArray(newsList);
+            }
+        };
+
+
+        getNewsData();
     }, []);
 
     function addNews(imageURL, description, title, type) {
         const newsRef = ref(database, "news");
         const newNewsRef = push(newsRef);
-        const newsID = newNewsRef.key;
+        const newsID = newNewsRef.key; // Récupérer la clé générée par push
 
         const currentDate = new Date().toISOString();
 
@@ -96,7 +115,7 @@ function AddNews() {
                     <p>•○ Create publication</p>
                 </div>
                 <div className="question2">
-                    <p>Create a post and sumbit for publish</p>
+                    <p>Create a post and submit for publish</p>
                 </div>
             </div>
 
@@ -109,8 +128,8 @@ function AddNews() {
                                 type="radio"
                                 id="media"
                                 name="type"
-                                value="media"
-                                checked={newsType === "In Media"}
+                                value="In media"
+                                checked={newsType === "In media"}
                                 onChange={handleTypeChange}
                                 required
                             />
@@ -123,8 +142,8 @@ function AddNews() {
                                 type="radio"
                                 id="event"
                                 name="type"
-                                value="event"
-                                checked={newsType === "In Event"}
+                                value="In event"
+                                checked={newsType === "In event"}
                                 onChange={handleTypeChange}
                                 required
                             />

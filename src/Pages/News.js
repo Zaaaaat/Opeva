@@ -49,7 +49,9 @@ function News() {
                     {newsList.map((news, index) => (
                         <div className="news-section" key={index}>
                             <div className="news-block">
-                                <img src={news.imageURL} alt="Image de la news" />
+                                <div className="news-image">
+                                <img className="imageeee" src={news.imageURL} alt="Image de la news" />
+                                </div>
                             </div>
                             <div className="news-details">
                                 <h2 className="title">{news.title}</h2>
@@ -77,8 +79,8 @@ function News() {
                         <hr/>
                         <ul>
                             <div className="line1">
-                                <a href="/EventNews"> <li>Event</li> </a>
-                                <a href="/MediaNews"> <li>Media</li> </a>
+                                <a href="/EventNews"> <li>In Event</li> </a>
+                                <a href="/MediaNews"> <li>In Media</li> </a>
                             </div>
                             <div className="line">
                                 <a href="/AddNews"> <li>New post</li> </a>

@@ -16,6 +16,8 @@ import Profil from "./Pages/Profil.js";
 import AddNews from "./Pages/AddNews.js";
 import EventNews from "./Pages/EventNews.js";
 import MediaNews from "./Pages/MediaNews.js";
+import NewsDetails from "./Pages/NewsDetails.js";
+
 import Cookies from 'js-cookie';
 
 
@@ -37,6 +39,7 @@ root.render(
                 <Route path="/AddNews" element={<AddNews/>} />
                 <Route path="/EventNews" element={<EventNews/>} />
                 <Route path="/MediaNews" element={<MediaNews/>} />
+                <Route path="/news/:newsId" component={NewsDetails} />
             </Routes>
         </BrowserRouter>
     </React.StrictMode>,

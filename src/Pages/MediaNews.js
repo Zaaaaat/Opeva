@@ -79,7 +79,7 @@ function MediaNews() {
                         <hr/>
                         <ul>
                             <div className="line1">
-                                <a href="/EventNews"> <li>Event</li> </a>
+                                <a href="/EventNews"> <li>In Event</li> </a>
                                 <a href="/News"> <li>All</li> </a>
                             </div>
                             <div className="line">
