@@ -27,7 +27,7 @@ function MediaNews() {
                     const title = news.title;
                     const type = news.type;
 
-                    if (type === "media") { // Filtrer les news de type "media"
+                    if (type === "In media") { // Filtrer les news de type "media"
                         newsArray.push({ imageURL, description, date, type, title });
                     }
                 });

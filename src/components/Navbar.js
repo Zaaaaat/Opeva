@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import '../CSS/navbar.css';
 import Logo from "../Images/opeva.png";
 import Loupe from "../Images/magnifying-glass.png";
@@ -9,7 +9,7 @@ import { Link, useNavigate } from "react-router-dom";
 function Navbar() {
 
     const [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem("isLoggedIn") === "true");
-    const [isOpen, setIsOpen] = React.useState(false);
+    const [isOpen, setIsOpen] = useState(false);
 
     const navigate = useNavigate();
     const handleLogout = () => {
@@ -79,7 +79,7 @@ function Navbar() {
         }
     }
 
-    window.addEventListener("scroll", function() {
+    window.addEventListener("scroll", function () {
         var navbar = document.querySelector("nav");
         if (window.scrollY > 100) {
             navbar.classList.add("scrolled");
@@ -150,13 +150,11 @@ function Navbar() {
                         <a href="/Connexion">CONNEXION</a>
                     )}
 
-
-
                 </div>
 
                 <div className="search-box">
                     <input type="text" placeholder="Search..." />
-                    <button><img src={Loupe} alt="logo"/></button>
+                    <button><img src={Loupe} alt="logo" /></button>
                 </div>
 
                 <div className="icon_click">

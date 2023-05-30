@@ -26,7 +26,7 @@ function EventNews() {
                     const title = news.title;
                     const type = news.type;
 
-                    if (type === "event") { // Filtrer les news de type "event"
+                    if (type === "In event") { // Filtrer les news de type "event"
                         newsArray.push({ imageURL, description, date, type, title });
                     }
                 });

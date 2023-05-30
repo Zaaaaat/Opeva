@@ -180,7 +180,9 @@ section{
 
 @media screen and (min-width: 1225px) {
 
+
     .nav_links ul {
+        color: white;
         margin: 2rem 0 0 0;
         padding: 2rem;
         position: absolute;
@@ -189,7 +191,7 @@ section{
         opacity: 0;
         left: auto;
         z-index: 900000000000000000000;
-        background-color: #002C4B;
+        background-color: rgba(0, 44, 75, 0.56);
         border-radius: 3px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         transition: all 2s cubic-bezier(0.39, 0.575, 0.565, 1);
@@ -197,8 +199,53 @@ section{
         justify-content: flex-start;
         align-items: flex-start;
         padding: 2em;
+        list-style: none;
         margin: 0;
     }
+
+    ul li a {
+        position: relative;
+    }
+
+    ul li a::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: -10px;
+        transform: translateY(-50%);
+        width: 4px;
+        height: 4px;
+        background-color: #ffffff;
+        color: #10B1B4;
+        border-radius: 50%;
+        opacity: 0;
+        transition: opacity 0.3s, left 0.3s;
+
+    }
+
+    ul li a:hover::before {
+        opacity: 1;
+        left: -20px;
+    }
+
+    ul li a span {
+        transition: margin-left 0.3s;
+    }
+
+    ul li a:hover span {
+        margin-left: 10px;
+    }
+
+    .dropdown li a:hover {
+        color: #10B1B4;
+        margin-left: 15px;
+        font-size: 1.3rem;
+    }
+
+    .nav_links a:hover{
+        font-size: 1.4rem;
+    }
+
 }
 
 .dropdown{
@@ -233,6 +280,8 @@ section{
         height: 8rem;
     }
 }
+
+
 
 
 

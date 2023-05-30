@@ -16,6 +16,12 @@ import top from "../Images/to_top.png";
 import stat from "../Images/stat.png";
 import img from "../Images/overview.png";
 import cross from "../Images/cross.png";
+import UB from "../Images/Partners/UB.png";
+import ESOGU from "../Images/Partners/ESOGU.png";
+import ULR from "../Images/Partners/ULR.png";
+import UPerugia from "../Images/Partners/UPerugia.png";
+import UNIPR from "../Images/Partners/UNIPR.png";
+
 import {Link} from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
@@ -239,7 +245,7 @@ function Home(){
                                     <div className="close-button" onClick={() => setIsPopupOpen(false)}>
                                         <img src={cross} alt={cross}></img>
                                     </div>
-                                    <img className="imageeee" src={selectedNews.imageURL} alt="Image de la news" />
+                                    <img className="imageeee" src={selectedNews.imageURL} alt="Image de la news"  />
                                 </div>
                                 <h2 className="title">{selectedNews.title}</h2>
                                 <p className="description">{selectedNews.description}</p>
@@ -269,7 +275,7 @@ function Home(){
                         <div className="square">
                             <a href="Partner">
                                 <div className="img-squaree">
-                                    <img src={lab} alt="my image" />
+                                    <img src={ESOGU} alt="my image" />
                                 </div>
                                 <div className="square-hover">
                                     <img src={plus} alt="know more"/>
@@ -281,7 +287,7 @@ function Home(){
                         <div className="square">
                             <a href="Partner">
                                 <div className="img-squaree">
-                                    <img src={lab} alt="my image" />
+                                    <img src={UB} alt="my image" />
                                 </div>
                                 <div className="square-hover">
                                     <img src={plus} alt="know more"/>
@@ -293,7 +299,7 @@ function Home(){
                         <div className="square">
                             <a href="Partner">
                                 <div className="img-squaree">
-                                    <img src={lab} alt="my image" />
+                                    <img src={ULR} alt="my image" />
                                 </div>
                                 <div className="square-hover">
                                     <img src={plus} alt="know more"/>
@@ -305,7 +311,7 @@ function Home(){
                         <div className="square">
                             <a href="Partner">
                                 <div className="img-squaree">
-                                    <img src={lab} alt="my image" />
+                                    <img src={UNIPR} alt="my image" />
                                 </div>
                                 <div className="square-hover">
                                     <img src={plus} alt="know more"/>
@@ -317,7 +323,7 @@ function Home(){
                         <div className="square">
                             <a href="Partner">
                                 <div className="img-squaree">
-                                    <img src={lab} alt="my image" />
+                                    <img src={UPerugia} alt="my image" />
                                 </div>
                                 <div className="square-hover">
                                     <img src={plus} alt="know more"/>
