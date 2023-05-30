@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { database, firebaseConfig } from "../firebase.config.js";
 import { ref, get, child, forEach } from "firebase/database";
+import { useParams } from "react-router-dom";
 import '../CSS/topEachPage.css';
 import '../CSS/news.css';
 import Navbar from '../components/Navbar.js';
 import Footer from '../components/Footer.js';
 
-function EventNews() {
+function SearchResults() {
     const [newsList, setNewsList] = useState([]);
+    const { query } = useParams();
 
     useEffect(() => {
         const newsRef = ref(database, "news");
@@ -26,15 +28,17 @@ function EventNews() {
                     const title = news.title;
                     const type = news.type;
 
-                    if (type === "In event") {
-                        newsArray.push({ imageURL, description, date, type, title });
-                    }
+                    newsArray.push({ imageURL, description, date, title, type });
                 });
 
                 setNewsList(newsArray);
             }
         });
     }, []);
+
+    const filteredNews = newsList.filter((news) =>
+        news.title.toLowerCase().includes(query.toLowerCase())
+    );
 
     return (
         <>
@@ -43,15 +47,17 @@ function EventNews() {
             </div>
 
             <div className="nav-bar-rectangle">
-                <span>EVENTS</span>
+                <span>SEARCH RESULTS</span>
             </div>
 
             <div className="container">
                 <div className="blockdivbardav">
-                    {newsList.map((news, index) => (
+                    {filteredNews.map((news, index) => (
                         <div className="news-section" key={index}>
                             <div className="news-block">
-                                <img src={news.imageURL} alt="Image de la news" />
+                                <div className="news-image">
+                                    <img className="imageeee" src={news.imageURL} alt="Image de la news" />
+                                </div>
                             </div>
                             <div className="news-details">
                                 <h2 className="title">{news.title}</h2>
@@ -65,28 +71,6 @@ function EventNews() {
                         </div>
                     ))}
                 </div>
-
-
-                <div className="sidebar">
-                    <label htmlFor="keyword">SEARCH :</label>
-                    <div className="search">
-                        <input type="text" id="keyword" placeholder="Enter keywords..." />
-                        <button id="search-button">Search</button>
-                    </div>
-                    <div className="categories">
-                        <h3>Categories</h3>
-                        <hr/>
-                        <ul>
-                            <div className="line1">
-                                <a href="/MediaNews"> <li>In Media</li> </a>
-                                <a href="/News"> <li>All</li> </a>
-                            </div>
-                            <div className="line">
-                                <a href="/AddNews"> <li>New post</li> </a>
-                            </div>
-                        </ul>
-                    </div>
-                </div>
             </div>
 
             <Footer />
@@ -94,4 +78,4 @@ function EventNews() {
     )
 }
 
-export default EventNews;
+export default SearchResults;

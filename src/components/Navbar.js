@@ -18,6 +18,12 @@ function Navbar() {
         navigate("/");
     };
 
+    const handleSearch = (event) => {
+        event.preventDefault();
+        const searchQuery = event.target.elements.search.value;
+        window.location.href = `/search/${searchQuery}`;
+    };
+
     const toggleMenu = () => {
         setIsOpen(!isOpen);
         const navLinks = document.querySelector(".nav_links");
@@ -152,10 +158,11 @@ function Navbar() {
 
                 </div>
 
-                <div className="search-box">
-                    <input type="text" placeholder="Search..." />
-                    <button><img src={Loupe} alt="logo" /></button>
-                </div>
+                <form className="search-box" onSubmit={handleSearch}>
+                    <input type="text" placeholder="Search..." name="search" />
+                    <button type="submit"><img src={Loupe} alt="logo" /></button>
+                </form>
+
 
                 <div className="icon_click">
                     <img

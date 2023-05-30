@@ -80,19 +80,19 @@ function AddNews() {
                     getDownloadURL(snapshot.ref).then((url) => {
                         addNews(url, description, title, newsType)
                             .then((newsID) => {
-                                console.log("Actualité ajoutée avec ID :", newsID);
+                                console.log("News added with ID:", newsID);
                                 navigate("/News");
                             })
                             .catch((error) => {
-                                console.log("Erreur lors de l'ajout de l'actualité :", error);
+                                console.log("Error when adding news:", error);
                             });
                     });
                 });
             } else {
-                alert("Veuillez sélectionner une image.");
+                alert("Please select an image.");
             }
         } else {
-            alert("Veuillez vous connecter pour publier un article.");
+            alert("Please login to post an article.");
         }
     }
 

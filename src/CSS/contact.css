@@ -7,6 +7,42 @@
     padding-left: 2rem;
 }
 
+.email-sent-overlay {
+    position: fixed;
+    top: 100px;
+    right: 15px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 5;
+}
+
+.email-sent-overlay {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    right: -300px;
+    transition: right 0.3s ease-in-out;
+}
+
+.email-sent-overlay.active {
+    right: 10px;
+}
+
+.validate-logo {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+.email-sent-overlay p{
+    font-size: large;
+}
+
+
+
 .img {
     width: 60%;
 }
@@ -23,7 +59,17 @@
     margin-left: 20px; /* ajuster la marge selon vos préférences */
 }
 
-p {
+.contain p {
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.text-underimage p{
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.formulaire p{
     margin-top: 10px;
     margin-bottom: 0px;
 }
@@ -272,6 +318,17 @@ textarea {
         padding-top: 4rem;
     }
 
+    .email-sent-overlay {
+        position: fixed;
+        top: 25px;
+        right: 25px;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+        z-index: 5;
+    }
+
     .img {
         width: 80%;
     }
@@ -369,3 +426,5 @@ textarea {
         font-size: 1.1em;
     }
 }
+
+

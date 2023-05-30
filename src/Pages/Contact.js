@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import '../CSS/topEachPage.css';
 import '../CSS/contact.css';
 import Navbar from '../components/Navbar.js';
@@ -7,11 +7,24 @@ import drive from '../Images/labo.jpg';
 import logo from '../Images/question.png';
 import more from '../Images/plusplus.png';
 import emailjs from "emailjs-com";
+import validateLogo from '../Images/validate.png';
 
 function Contact(){
     const form = useRef();
+    const [isEmailSent, setIsEmailSent] = useState(false);
 
-    const sendEmail = (e) => {
+    useEffect(() => {
+        const overlayTimeout = setTimeout(() => {
+            setIsEmailSent(false);
+        }, 3000); // Modifier la durée de l'animation ici (en millisecondes)
+
+        return () => {
+            clearTimeout(overlayTimeout);
+        };
+    }, [isEmailSent]);
+
+
+    const handleFormSubmit = (e) => {
         e.preventDefault();
 
         emailjs.sendForm(
@@ -24,12 +37,17 @@ function Contact(){
                 (result) => {
                     console.log(result.text);
                     console.log("message sent");
+                    setIsEmailSent(true);
                 },
                 (error) => {
                     console.log(error.text);
                 }
             );
     };
+
+    function handleclickemail(){
+        setIsEmailSent(false);
+    }
 
     return(
         <>
@@ -106,7 +124,7 @@ function Contact(){
             </div>
 
             <div className="form-container">
-                <form onSubmit={sendEmail} ref={form}>
+                    <form onSubmit={handleFormSubmit} ref={form}>
                     <div className="form-row">
 
 
@@ -145,6 +163,14 @@ function Contact(){
                     </div>
                 </form>
             </div>
+
+            {isEmailSent && (
+                <div className={`email-sent-overlay ${isEmailSent ? 'active' : ''}`} onClick={handleclickemail}>
+                    <img src={validateLogo} alt="Email sent" className="validate-logo" />
+                    <p>Email sent successfully!</p>
+                </div>
+            )}
+
 
             <Footer/>
         </>
