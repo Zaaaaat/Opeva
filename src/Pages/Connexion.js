@@ -57,7 +57,6 @@ function Connexion() {
                         <div className="validation">{validation}</div>
                         <input ref={addInputs} type="submit" id="submit" value="VALIDER" />
                         <br />
-                        <a href="#">forget password?</a>
                         {isLoggedIn && <Link to="/Profil">Profil</Link>}
                     </div>
                 </form>
