@@ -16,10 +16,12 @@ import top from "../Images/to_top.png";
 import stat from "../Images/stat.png";
 import img from "../Images/overview.png";
 import cross from "../Images/cross.png";
-import UB from "../Images/Partners/UB.png";
+import ugeneve from "../Images/Partners/Ugeneve.png";
+import vub from "../Images/Partners/VUB.png";
 import ESOGU from "../Images/Partners/ESOGU.png";
-import ULR from "../Images/Partners/ULR.png";
 import UPerugia from "../Images/Partners/UPerugia.png";
+import ULR from "../Images/Partners/ULR.png";
+import UB from "../Images/Partners/UB.png";
 import UNIPR from "../Images/Partners/UNIPR.png";
 
 import {Link} from "react-router-dom";
@@ -32,6 +34,29 @@ function Home(){
     const [latestNews, setLatestNews] = useState([]);
     const navigate = useNavigate();
     const appRootRef = useRef(null);
+
+    const partnerImages = [
+        ESOGU,
+        UB,
+        ULR,
+        UNIPR,
+        UPerugia,
+        ugeneve,
+        vub,
+    ];
+
+    function shuffleArray(array) {
+        const newArray = [...array];
+        for (let i = newArray.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+        }
+        return newArray;
+    }
+
+    const shuffledImages = shuffleArray(partnerImages);
+    const randomPartnerImages = shuffledImages.slice(0, 4);
+
 
     const handleNewsClick = (news) => {
         setSelectedNews(news);
@@ -272,64 +297,27 @@ function Home(){
 
 
                     <div className="allsquares">
-                        <div className="square">
-                            <a href="Partner">
-                                <div className="img-squaree">
-                                    <img src={ESOGU} alt="my image" />
-                                </div>
-                                <div className="square-hover">
-                                    <img src={plus} alt="know more"/>
-                                    <span>More partners</span>
-                                </div>
-                            </a>
-                        </div>
+                        {randomPartnerImages.map((image, index) => (
+                            <div className="square" key={index}>
+                                <a href="Partner">
+                                    <div className="img-squaree">
+                                        <img src={image} alt="my image" />
+                                    </div>
+                                    <div className="square-hover">
+                                        <img src={plus} alt="know more"/>
+                                        <span>More partners</span>
+                                    </div>
+                                </a>
+                            </div>
+                        ))}
 
                         <div className="square">
-                            <a href="Partner">
-                                <div className="img-squaree">
-                                    <img src={UB} alt="my image" />
-                                </div>
-                                <div className="square-hover">
+                            <div className="square-hover">
                                     <img src={plus} alt="know more"/>
                                     <span>More partners</span>
-                                </div>
-                            </a>
-                        </div>
 
-                        <div className="square">
-                            <a href="Partner">
-                                <div className="img-squaree">
-                                    <img src={ULR} alt="my image" />
                                 </div>
-                                <div className="square-hover">
-                                    <img src={plus} alt="know more"/>
-                                    <span>More partners</span>
-                                </div>
-                            </a>
-                        </div>
 
-                        <div className="square">
-                            <a href="Partner">
-                                <div className="img-squaree">
-                                    <img src={UNIPR} alt="my image" />
-                                </div>
-                                <div className="square-hover">
-                                    <img src={plus} alt="know more"/>
-                                    <span>More partners</span>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div className="square">
-                            <a href="Partner">
-                                <div className="img-squaree">
-                                    <img src={UPerugia} alt="my image" />
-                                </div>
-                                <div className="square-hover">
-                                    <img src={plus} alt="know more"/>
-                                    <span>More partners</span>
-                                </div>
-                            </a>
                         </div>
                     </div>
 
