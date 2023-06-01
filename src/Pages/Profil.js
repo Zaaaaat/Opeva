@@ -6,43 +6,37 @@ import Navbar from '../components/Navbar.js';
 import Footer from '../components/Footer.js';
 import { auth } from '../firebase.config.js';
 import { getAuth, sendPasswordResetEmail } from 'firebase/auth';
+import { useNavigate } from 'react-router-dom';
+
 
 function Profil() {
 
-    const email = auth.currentUser ? auth.currentUser.email : 'user@example.com';
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const email = auth.currentUser ? auth.currentUser.email : '';
+    const navigate = useNavigate();
 
     useEffect(() => {
-        const checkLoginStatus = () => {
-            // Vérifie si l'utilisateur est connecté
-            // Par exemple, tu peux utiliser le code suivant pour vérifier si l'utilisateur est connecté en utilisant Firebase Authentication :
-            const auth = getAuth();
-            const user = auth.currentUser;
-            setIsLoggedIn(user !== null);
-        };
+        const isLoggedIn = localStorage.getItem('isLoggedIn');
 
-        checkLoginStatus();
-    }, []);
-
+        if (!isLoggedIn) {
+            navigate('/Connexion');
+        }
+    }, [navigate]);
 
     const handleForgotPassword = () => {
-        if (isLoggedIn) {
-            const user = auth.currentUser;
-            if (user) {
-                const email = user.email;
-                sendPasswordResetEmail(auth, email)
-                    .then(() => {
-                        alert('A password reset email has been sent to your email address. Don\'t forget to check your junk mail or spam.');
-                    })
-                    .catch((error) => {
-                        console.error(error);
-                    });
-            }
-        }
-        else {
-            alert('You must be for access to this page.');
+        const user = auth.currentUser;
+
+        if (user) {
+            const email = user.email;
+            sendPasswordResetEmail(auth, email)
+                .then(() => {
+                    alert('A password reset email has been sent to your email address. Don\'t forget to check your junk mail or spam.');
+                })
+                .catch((error) => {
+                    console.error(error);
+                });
         }
     };
+
 
 
     const [username, setUsername] = useState(Cookies.get('username') || 'admin');
@@ -55,8 +49,6 @@ function Profil() {
     };
 
     return (
-        <>
-            {isLoggedIn ? (
                 <>
                     <div className="rectangle-nav">
                         <Navbar/>
@@ -103,19 +95,6 @@ function Profil() {
 
                     <Footer/>
                 </>
-            ) : (
-                // Redirection vers la page de connexion si l'utilisateur n'est pas connecté
-                <>
-                    <div className="rectangle-nav">
-                        <Navbar/>
-                    </div>
-                    <div className="nav-bar-rectangle">
-                        <h1>Please login to access this page.</h1>
-                    </div>
-                    <Footer/>
-                </>
-            )}
-        </>
     );
 }
 export default Profil;

@@ -36,7 +36,8 @@
     right: 0;
     display: flex;
     justify-content: right;
-
+    align-items: center;
+    height: 2rem;
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -255,7 +256,6 @@ section{
 .nav_links .dropdown:hover > ul{
     display: flex;
     opacity: 1;
-
 }
 
 
@@ -270,6 +270,7 @@ section{
 
 .nav_links .dropdown > a {
     pointer-events: auto;
+
 }
 
 

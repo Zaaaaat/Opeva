@@ -27,13 +27,16 @@ function Connexion() {
             await signInWithEmailAndPassword(auth, email, password);
             console.log("Successfully signed in!");
             localStorage.setItem("isLoggedIn", true);
-            setIsLoggedIn(true);
+            setIsLoggedIn(true); // Mettre à jour la valeur de isLoggedIn
             navigate("/");
         } catch (error) {
             console.error(error);
             setValidation("Email ou mot de passe incorrect");
         }
     };
+
+
+
 
     return (
         <>
@@ -55,7 +58,7 @@ function Connexion() {
                         <input ref={addInputs} type="submit" id="submit" value="VALIDER" />
                         <br />
                         <a href="#">forget password?</a>
-                        {isLoggedIn && <Link to="/AddNews">Nouveau post</Link>}
+                        {isLoggedIn && <Link to="/Profil">Profil</Link>}
                     </div>
                 </form>
             </div>
