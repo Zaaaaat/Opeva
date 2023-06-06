@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { ref, get } from 'firebase/database';
-import { database, firebaseConfig } from "../firebase.config.js";
+import { database } from "../firebase.config.js";
 import { format } from 'date-fns';
 
 import '../CSS/home.css';
@@ -312,12 +312,18 @@ function Home(){
                         ))}
 
                         <div className="square">
-                            <div className="square-hover">
-                                    <img src={plus} alt="know more"/>
-                                    <span>More partners</span>
+
+                            <div className="square-text">
+                            <div className="square-desc">
+                                    <p> See our partners</p>
 
                                 </div>
+                            </div>
 
+                            <div className="square-hover">
+                                <img src={plus} alt="know more"/>
+                                <span>More partners</span>
+                            </div>
                         </div>
                     </div>
 

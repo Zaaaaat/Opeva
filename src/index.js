@@ -18,7 +18,7 @@ import EventNews from "./Pages/EventNews.js";
 import MediaNews from "./Pages/MediaNews.js";
 import SearchResults from "./Pages/SearchResults.js";
 
-import Cookies from 'js-cookie';
+// import Cookies from 'js-cookie';
 
 const root = createRoot(document.getElementById('root'));
 root.render(

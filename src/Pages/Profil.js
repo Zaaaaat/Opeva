@@ -5,7 +5,7 @@ import '../CSS/profil.css';
 import Navbar from '../components/Navbar.js';
 import Footer from '../components/Footer.js';
 import { auth } from '../firebase.config.js';
-import { getAuth, sendPasswordResetEmail } from 'firebase/auth';
+import { sendPasswordResetEmail } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
 
 

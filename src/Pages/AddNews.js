@@ -6,14 +6,13 @@ import Footer from '../components/Footer.js';
 import { database, firebaseConfig } from "../firebase.config.js";
 import { set, ref, push } from "firebase/database";
 import { initializeApp } from "firebase/app";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { ref as storageRef, uploadBytes, getDownloadURL, listAll } from "firebase/storage";
 import { storage } from "../firebase.config.js";
 import { format } from 'date-fns';
 
 
 function AddNews() {
-    const app = initializeApp(firebaseConfig);
     const navigate = useNavigate();
     const [newsType, setNewsType] = useState("");
     const [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem("isLoggedIn") === "true");

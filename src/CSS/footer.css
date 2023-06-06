@@ -39,6 +39,16 @@ footer h3{
     flex-direction: column;
 }
 
+.footer-items{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-items li{
+    display: flex;
+    flex-direction: column;
+}
+
 .footer-sectionblock{
     display: flex;
     flex-direction: row;

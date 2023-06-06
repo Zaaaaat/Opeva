@@ -24,7 +24,7 @@ function About(){
             <section>
             <div className="container-ow">
                 <div className="img-container">
-                    <img src={img} alt="my image" />
+                    <img src={img} alt="about" />
                 </div>
                 <div className="text-container">
                     <h2>To optimization the electric vehicule autonomy</h2>
@@ -143,7 +143,7 @@ function About(){
                         </div>
 
                     <div className="grid-item">
-                        <div className="round greenn"><img src={WP} alt="Image"/></div>
+                        <div className="round greenn"><img src={WP} alt="round green"/></div>
                     </div>
 
                         <div className="grid-item">

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { database, firebaseConfig } from "../firebase.config.js";
+import { database } from "../firebase.config.js";
 import { ref, get, child, forEach } from "firebase/database";
 import { useParams } from "react-router-dom";
 import '../CSS/topEachPage.css';

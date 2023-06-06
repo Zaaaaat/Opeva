@@ -44,7 +44,7 @@ function Connexion() {
                 <form onSubmit={handleForm}>
                     <div className="containerr">
                         <a href="/">
-                            <img src={utilisateur} alt="image" />
+                            <img src={utilisateur} alt="user" />
                         </a>
                         <div className="form-input">
                             <i className="fa fa-user fa-2x" aria-hidden="true"></i>
