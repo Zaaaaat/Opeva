@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { database } from "../firebase.config.js";
-import { ref, get, child, forEach } from "firebase/database";
+import { ref, get} from "firebase/database";
 import '../CSS/topEachPage.css';
 import '../CSS/news.css';
 import Navbar from '../components/Navbar.js';

@@ -20,7 +20,7 @@ function Papers(){
                 <div className="h1-Contain">
                     <div className="wp-title">Published papers</div>
                     <ul>
-                        <li> <a href="#" className="name"> Exemple-1.pdf </a> </li>
+                        <li> <a href="" className="name"> Exemple-1.pdf </a> </li>
                         <li> <a href="#" className="name"> Exemple-2.pdf </a> </li>
                         <li> <a href="#" className="name"> Exemple-3.pdf </a> </li>
                         <li> <a href="#" className="name"> Exemple-4.pdf </a> </li>

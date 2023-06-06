@@ -14,7 +14,6 @@ import map from "../Images/map.png";
 import cal from "../Images/calendar.png";
 import top from "../Images/to_top.png";
 import stat from "../Images/stat.png";
-import img from "../Images/overview.png";
 import cross from "../Images/cross.png";
 import ugeneve from "../Images/Partners/Ugeneve.png";
 import vub from "../Images/Partners/VUB.png";
@@ -24,7 +23,6 @@ import ULR from "../Images/Partners/ULR.png";
 import UB from "../Images/Partners/UB.png";
 import UNIPR from "../Images/Partners/UNIPR.png";
 
-import {Link} from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 function Home(){
@@ -32,7 +30,6 @@ function Home(){
     const [isPopupOpen, setIsPopupOpen] = useState(false);
     const [selectedNews, setSelectedNews] = useState(null);
     const [latestNews, setLatestNews] = useState([]);
-    const navigate = useNavigate();
     const appRootRef = useRef(null);
 
     const partnerImages = [
@@ -63,9 +60,6 @@ function Home(){
         setIsPopupOpen(true);
     };
 
-    const closePopup = () => {
-        setIsPopupOpen(false);
-    };
 
     useEffect(() => {
         const newsRef = ref(database, 'news');
