@@ -18,9 +18,13 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.11.1",
+<<<<<<< Updated upstream
     "react-scripts": "5.0.1",
     "run": "^1.4.0",
     "swig": "^1.4.2",
+=======
+    "react-scripts": "^5.0.1",
+>>>>>>> Stashed changes
     "web-vitals": "^2.1.4"
   },
   "scripts": {
